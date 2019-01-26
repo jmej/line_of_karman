@@ -3,7 +3,7 @@
      */
      
     int ledPin = 13;                // choose the pin for the LED
-    int inputPin = 0;               // choose the input pin (for PIR sensor)
+    int inputPin =22;               // choose the input pin (for PIR sensor)
     int pirState = LOW;             // we start, assuming no motion detected
     int val = 0;                    // variable for reading the pin status
      
