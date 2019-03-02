@@ -1,0 +1,46 @@
+#N canvas 0 50 774 433 10;
+#X obj 163 340 dbtorms;
+#X floatatom 115 367 5 0 0 0 - - -;
+#X floatatom 115 342 5 0 0 0 - - -;
+#X msg 152 293 100;
+#X obj 152 264 t b f;
+#X obj 112 123 vsl 15 128 -100 0 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3900 1;
+#X floatatom 112 264 5 0 0 0 - - -;
+#X obj 163 405 outlet;
+#X obj 198 82 inlet mute;
+#X obj 112 78 inlet db;
+#X obj 198 106 sel 0 1;
+#X obj 223 310 f;
+#X text 357 80 attenuator jmej // parallel.studio 2018;
+#X text 358 162 gui slider is for temporary control \, not presetting
+;
+#X text 110 282 db;
+#X obj 163 318 +;
+#X text 356 117 expects to be initialized with a (negative) number
+into first inlet before muting behavior works;
+#X msg 198 132 -100;
+#X obj 238 134 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 241 405 outlet;
+#X text 251 387 db outlet;
+#X text 173 375 power outlet;
+#X connect 0 0 1 0;
+#X connect 0 0 7 0;
+#X connect 3 0 15 0;
+#X connect 4 0 3 0;
+#X connect 4 1 15 1;
+#X connect 5 0 4 0;
+#X connect 5 0 6 0;
+#X connect 5 0 19 0;
+#X connect 8 0 10 0;
+#X connect 9 0 5 0;
+#X connect 9 0 11 1;
+#X connect 10 0 17 0;
+#X connect 10 1 18 0;
+#X connect 11 0 5 0;
+#X connect 15 0 0 0;
+#X connect 15 0 2 0;
+#X connect 17 0 5 0;
+#X connect 18 0 11 0;
+#X coords 0 -1 1 1 40 200 1 100 100;
